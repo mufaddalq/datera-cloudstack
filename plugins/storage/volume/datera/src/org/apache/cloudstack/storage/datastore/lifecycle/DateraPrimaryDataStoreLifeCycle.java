@@ -179,7 +179,8 @@ public class DateraPrimaryDataStoreLifeCycle implements PrimaryDataStoreLifeCycl
 
     @Override
     public boolean attachCluster(DataStore store, ClusterScope scope) {
-        return true; // should be ignored for zone-wide-only plug-ins
+        throw new UnsupportedOperationException("Only Zone-wide scope is supported with the Datera Storage driver");
+        //return true; // should be ignored for zone-wide-only plug-ins
     }
 
     @Override
